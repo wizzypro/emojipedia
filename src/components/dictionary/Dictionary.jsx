@@ -2,8 +2,10 @@ import React from "react";
 import Entry from "../entry/Entry";
 import emojipedia from "../../emojipedia.js";
 
-let createEntry = (entry) => {
-  return <Entry emoji={entry.emoji} dt={entry.name} dd={entry.meaning} />;
+let createEntry = (entry, index) => {
+  return (
+    <Entry key={index} emoji={entry.emoji} dt={entry.name} dd={entry.meaning} />
+  );
 };
 
 let Dictionary = () => {
